@@ -13,7 +13,7 @@
 </form> -->
 <div style="padding-left: 50px;">
   <p>
-    <span>Address: </span><input matInput style="width: 150px" placeholder="IP" #address (keyup)="addressUpdate(address.value)"> : <input style="width: 100px" placeholder="Port" #port (keyup)="portUpdate(port.value)">
+    <span>Address: </span><input matInput style="width: 150px" placeholder="IP" #address (keyup)="addressUpdate(address.value)"> : <input style="width: 100px" disabled value="5667" placeholder="Port" #port (keyup)="portUpdate(port.value)">
   </p>
   <p>
     <span>Password: </span><input style="width: 250px" placeholder="Password" #password (keyup)="passwordUpdate(password.value)">
