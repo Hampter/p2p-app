@@ -10,7 +10,7 @@ import { P2pService } from '../_services/p2p.service';
 
 export class InputComponent {
   address = '';
-  port = '';
+  port = "5667";
   password = '';
   fileName = '';
   file: File | undefined;
@@ -48,7 +48,7 @@ export class InputComponent {
 
   sendFile() {
     if (this.address && this.port && this.file) {
-      const upload$ = this.p2p.sendFile(this.file, this.address, this.port);
+      this.p2p.sendFile(this.file, this.address, this.port);
     }
   }
 }
