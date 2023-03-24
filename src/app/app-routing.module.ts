@@ -8,6 +8,7 @@ const routes: Routes = [
   { path: 'input', component: InputComponent },
   { path: 'start', component: StartComponent },
   { path: 'recieve', component: RecieveComponent },
+  { path: '', redirectTo: 'start', pathMatch: 'full' },
 ];
 
 @NgModule({
