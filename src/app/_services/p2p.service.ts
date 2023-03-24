@@ -12,10 +12,18 @@ export class P2pService {
   peer: any;
   connection: any;
   upload$: Observable<any> | undefined;
+  download$ : Observable<any> | undefined;
 
   sendFile(file: File, ip: string, port: string) {
     this.upload$ = this.http.post(`${{ip}}:${{port}}`, {
       "file": file
     })
+    return this.upload$;
+  }
+  
+  recieveFile(port: string) {
+    // this.download$ = this.http.get(`127.0.0.1:${{port}}`);
+    this.download$ = this.http.get("127.0.0.1:" + port);
+    return this.download$;
   }
 }
