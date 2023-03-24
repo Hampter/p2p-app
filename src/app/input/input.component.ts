@@ -45,4 +45,10 @@ export class InputComponent {
     //   webkitRelativePath
     // }
   }
+
+  sendFile() {
+    if (this.address && this.port && this.file) {
+      const upload$ = this.p2p.sendFile(this.file, this.address, this.port);
+    }
+  }
 }
