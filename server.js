@@ -1,8 +1,8 @@
-const app = require('express')();
-const http = require('http').Server(app);
+const app2 = require('express')();
+const http = require('http').Server(app2);
 const io = require('socket.io')(http);
 
-app.get('/', (req, res) => {
+app2.get('/', (req, res) => {
   res.send('<h1>Hey Socket.io</h1>');
 });
 

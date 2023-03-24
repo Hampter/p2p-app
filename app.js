@@ -1,5 +1,4 @@
-const server = require("./server");
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow } = require('electron')
 const url = require("url");
 const path = require("path");
 
@@ -27,9 +26,12 @@ function createWindow() {
   );
   // mainWindow.loadURL(`http://localhost:4200/index.html`);
 
-  mainWindow.removeMenu();
   // Open the DevTools.
   mainWindow.webContents.openDevTools();
+
+  // mainWindow.removeMenu();
+  const server = require("./server")
+  server.serverInit();
 
   mainWindow.on('closed', function () {
     mainWindow = null
@@ -37,8 +39,6 @@ function createWindow() {
 }
 
 app.on('ready', createWindow)
-
-server.serverInit();
 
 app.on('window-all-closed', function () {
   if (process.platform !== 'darwin') app.quit()
