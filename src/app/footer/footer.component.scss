@@ -1,0 +1,9 @@
+.bar {
+  width: 100%;
+  height: 25px;
+  position: absolute;
+  top: calc(100vh - 25px);
+  background-color: white;
+  border-top: solid 1px lightgray;
+  padding: 0 5px;
+}
