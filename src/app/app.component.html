@@ -1,4 +1,10 @@
-<div class="container">
-  <router-outlet></router-outlet>
+<div style="width:75vw; position: absolute; left: 25vw">
+  <app-nav-bar></app-nav-bar>
+  <div class="main-container">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+<div style="width:25vw; position: absolute;">
+  <app-connection></app-connection>
 </div>
 <app-footer></app-footer>

@@ -1,0 +1,27 @@
+<div class="connection-container">
+  <button mat-fab extended color="accent" (click)="this.togglePopUp()">
+    <mat-icon>add</mat-icon>
+    Add
+  </button>
+</div>
+
+<div *ngIf="this.popup">
+  <div class="darken"></div>
+  <div class="input-container">
+    <p>
+      <b>New Connection</b>
+      <button class="close" (click)="this.togglePopUp()">
+        <mat-icon>close</mat-icon>
+      </button>
+    </p>
+    <p>
+      <span>Address: </span><input matInput style="width: 150px" placeholder="IP" #address
+        (keyup)="addressUpdate(address.value)"> : <input style="width: 100px" disabled value="5667" placeholder="Port"
+        #port (keyup)="portUpdate(port.value)">
+    </p>
+    <p>
+      <span>Password: </span><input style="width: 250px" placeholder="Password" #password
+        (keyup)="passwordUpdate(password.value)">
+    </p>
+  </div>
+</div>

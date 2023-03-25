@@ -15,13 +15,22 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 
+import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { ChatComponent } from './chat/chat.component';
+import { SettingsComponent } from './settings/settings.component';
+import { ConnectionComponent } from './connection/connection.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     InputComponent,
     StartComponent,
     RecieveComponent,
-    FooterComponent
+    FooterComponent,
+    NavBarComponent,
+    ChatComponent,
+    SettingsComponent,
+    ConnectionComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +40,7 @@ import { MatInputModule } from '@angular/material/input';
     BrowserAnimationsModule,
     MatIconModule,
     MatButtonModule,
-    MatInputModule
+    MatInputModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

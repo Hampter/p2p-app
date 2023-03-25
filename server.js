@@ -16,7 +16,7 @@ function serverInit() {
   });
 
   http.listen(5667, () => {
-    console.log("listening on 5667");
+    console.log("Listening on 5667");
   })
 }
 
