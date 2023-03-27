@@ -1,8 +1,17 @@
 <div class="connection-container">
-  <button mat-fab extended color="accent" (click)="this.togglePopUp()">
+  <button mat-fab extended class="mb-1" color="accent" (click)="this.togglePopUp()">
     <mat-icon>add</mat-icon>
     Add
   </button>
+  <div class="connection-card">
+    <p class="connection-name"><b>Noah</b>
+      <span class="connection-status-on"></span>
+      <button class="trash" (click)="this.togglePopUp()">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </p>
+    <p class="connection-ip">192.168.123.213:30303</p>
+  </div>
 </div>
 
 <div *ngIf="this.popup">

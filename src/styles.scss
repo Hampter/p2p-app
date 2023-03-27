@@ -9,14 +9,88 @@
 // Be sure that you only ever include this mixin once!
 @include mat.core();
 
+$p2p-app-orange-palette: (
+  50: #fff2df,
+  100: #ffdeb1,
+  200: #ffc87e,
+  300: #ffb24b,
+  400: #ffa123,
+  500: #fe9100,
+  600: #fa8500,
+  700: #f47501,
+  800: #ee6402,
+  900: #e54803,
+  contrast: (
+     50: rgba(white, 0.87),
+    100: rgba(white, 0.87),
+    200: rgba(white, 0.87),
+    300: rgba(white, 0.87),
+    400: rgba(white, 0.87),
+    500: rgba(white, 0.87),
+    600: rgba(white, 0.87),
+    700: rgba(white, 0.87),
+    800: rgba(white, 0.87),
+    900: rgba(white, 0.87),
+  )
+);
+
+$p2p-app-blue-palette: (
+  50: #e3f3fe,
+  100: #bbdffe,
+  200: #8fccfe,
+  300: #60b8fd,
+  400: #39a9fd,
+  500: #019afc,
+  600: #028cee,
+  700: #0079db,
+  800: #0068c9,
+  900: #004aaa,
+  contrast: (
+     50: rgba(white, 0.87),
+    100: rgba(white, 0.87),
+    200: rgba(white, 0.87),
+    300: rgba(white, 0.87),
+    400: rgba(white, 0.87),
+    500: rgba(white, 0.87),
+    600: rgba(white, 0.87),
+    700: rgba(white, 0.87),
+    800: rgba(white, 0.87),
+    900: rgba(white, 0.87),
+  )
+);
+
+$p2p-app-red-palette: (
+  50: #ffe9ec,
+  100: #ffc8cc,
+  200: #f8928e,
+  300: #ef6562,
+  400: #f83b38,
+  500: #fc1e12,
+  600: #ee0216,
+  700: #dc0010,
+  800: #d00006,
+  900: #c20000,
+  contrast: (
+     50: rgba(white, 0.87),
+    100: rgba(white, 0.87),
+    200: rgba(white, 0.87),
+    300: rgba(white, 0.87),
+    400: rgba(white, 0.87),
+    500: rgba(white, 0.87),
+    600: rgba(white, 0.87),
+    700: rgba(white, 0.87),
+    800: rgba(white, 0.87),
+    900: rgba(white, 0.87),
+  )
+);
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$p2p-app-primary: mat.define-palette(mat.$indigo-palette);
-$p2p-app-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$p2p-app-primary: mat.define-palette($p2p-app-orange-palette, 800, 300, 900);
+$p2p-app-accent: mat.define-palette($p2p-app-blue-palette, 600, 300, 800);
 
 // The warn palette is optional (defaults to red).
-$p2p-app-warn: mat.define-palette(mat.$red-palette);
+$p2p-app-warn: mat.define-palette($p2p-app-blue-palette, 600, 300, 800);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
