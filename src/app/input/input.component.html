@@ -1,16 +1,18 @@
-<p>
-  <span>Address: </span><input matInput style="width: 150px" placeholder="IP" #address
-    (keyup)="addressUpdate(address.value)"> : <input style="width: 100px" disabled value="5667" placeholder="Port" #port
-    (keyup)="portUpdate(port.value)">
-</p>
-<p>
-  <span>Password: </span><input style="width: 250px" placeholder="Password" #password
-    (keyup)="passwordUpdate(password.value)">
-</p>
-<p>
-  <input type="file" (change)="fileAttached($event)" style="display: none;" #fileUpload>
-  <button mat-mini-fab color="primary" (click)="fileUpload.click()"
-    style="vertical-align: middle;"><mat-icon>attach_file</mat-icon></button><span
-    style="vertical-align: middle; margin-left: 10px;">{{fileName || "Select File"}}</span>
-</p>
-<button mat-raised-button color="primary" (click)="sendFile()">Send</button>
+<div style="padding: 20px; height: 100%">
+  <p>
+    <span>Address: </span><input matInput style="width: 150px" placeholder="IP" #address
+      (keyup)="addressUpdate(address.value)"> : <input style="width: 100px" disabled value="5667" placeholder="Port"
+      #port (keyup)="portUpdate(port.value)">
+  </p>
+  <p>
+    <span>Password: </span><input style="width: 250px" placeholder="Password" #password
+      (keyup)="passwordUpdate(password.value)">
+  </p>
+  <p>
+    <input type="file" (change)="fileAttached($event)" style="display: none;" #fileUpload>
+    <button mat-mini-fab color="primary" (click)="fileUpload.click()"
+      style="vertical-align: middle;"><mat-icon>attach_file</mat-icon></button><span
+      style="vertical-align: middle; margin-left: 10px;">{{fileName || "Select File"}}</span>
+  </p>
+  <button mat-raised-button color="primary" (click)="sendFile()">Send</button>
+</div>
