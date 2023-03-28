@@ -3,14 +3,16 @@
     <mat-icon>add</mat-icon>
     Add
   </button>
-  <div class="connection-card">
-    <p class="connection-name"><b>Noah</b>
-      <span class="connection-status-on"></span>
-      <button class="trash" (click)="this.togglePopUp()">
-        <mat-icon>delete</mat-icon>
-      </button>
-    </p>
-    <p class="connection-ip">192.168.123.213:30303</p>
+  <div>
+    <div class="connection-card">
+      <div class="connection-name"><b>Noah</b>
+        <span class="connection-status-circle connection-status-on"></span>
+        <button class="trash" (click)="this.togglePopUp()">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </div>
+      <div class="connection-ip">192.168.123.213:30303</div>
+    </div>
   </div>
 </div>
 

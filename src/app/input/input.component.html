@@ -9,8 +9,8 @@
 </p>
 <p>
   <input type="file" (change)="fileAttached($event)" style="display: none;" #fileUpload>
-  <button mat-mini-fab color="primary" (click)="fileUpload.click()"
+  <button mat-mini-fab color="accent" (click)="fileUpload.click()"
     style="vertical-align: middle;"><mat-icon>attach_file</mat-icon></button><span
     style="vertical-align: middle; margin-left: 10px;">{{fileName || "Select File"}}</span>
 </p>
-<button mat-raised-button color="primary" (click)="sendFile()">Send</button>
+<button mat-raised-button color="accent" (click)="sendFile()">Send</button>
