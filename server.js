@@ -6,10 +6,17 @@ app2.get('/', (req, res) => {
   res.send('<h1>Hey Socket.io</h1>');
 });
 
+var mySocket;
+
 function serverInit() {
   console.log("Creating server...");
   io.on("connection", socket => {
-    console.log("User connected");
+    if (socket.handshake.address.split(":")[3] == "127.0.0.1") {
+      console.log("Host connected");
+      mySocket = socket;
+    } else {
+      console.log("User connected");
+    } 
     socket.on("disconnect", e => {
       console.log("User disconnected");
     })

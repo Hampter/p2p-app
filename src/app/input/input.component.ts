@@ -48,7 +48,7 @@ export class InputComponent {
 
   sendFile() {
     if (this.address && this.port && this.file) {
-      this.p2p.sendFile(this.file, this.address, this.port);
+      this.p2p.sendFile(this.file, this.address, this.port, "");
     }
   }
 }

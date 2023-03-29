@@ -33,7 +33,7 @@
 }
 
 .chat-client {
-  max-width: 40%;
+  // max-width: 45%;
   background-color: #028cee;
   padding: 10px;
   // border: solid 1px lightgray;
@@ -44,11 +44,15 @@
 }
 
 .chat-peer {
-  max-width: 40%;
+  // max-width: 45%;
   background-color: white;
   padding: 10px;
-  border: solid 1px lightgray;
+  // border: solid 1px lightgray;
   border-radius: 10px;
   font-size: 15px;
   margin-right: auto;
+}
+
+.timestamp {
+  font-size: 12px;
 }

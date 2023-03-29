@@ -17,14 +17,14 @@ function createWindow() {
   })
   // https://www.electronjs.org/docs/latest/tutorial/window-customization#create-frameless-windows
 
-  // mainWindow.loadURL(
-  //   url.format({
-  //     pathname: path.join(__dirname, `/dist/p2p-app/index.html`),
-  //     protocol: "file:",
-  //     slashes: true
-  //   })
-  // );
-  mainWindow.loadURL(`http://localhost:4200/index.html`);
+  mainWindow.loadURL(
+    url.format({
+      pathname: path.join(__dirname, `/dist/p2p-app/index.html`),
+      protocol: "file:",
+      slashes: true
+    })
+  );
+  // mainWindow.loadURL(`http://localhost:4200/index.html`);
 
   // Open the DevTools.
   mainWindow.webContents.openDevTools();
